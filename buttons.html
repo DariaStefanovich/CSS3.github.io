@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>buttons</title>
+    <style>
+        button{
+                cursor: pointer;
+            }
+        .button-1{
+            border: none; outline: none;
+            width: 200px;
+            height: 50px;
+            font-size: 15px;
+            color: #2196f3;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: radial-gradient(circle, rgba(238,174,202,1) 46%, rgba(33,157,243,1) 100%);
+        
+        }
+        .button-1:hover{
+            border: none; outline: none;
+            color: #255784;
+            box-shadow: 200px 0 0 0 rgba(0,0,0,.1) inset;
+            
+        }
+        .button-1:active{
+            border: none; outline: none;
+            color: #d9719e;
+            background: #eeaeca;
+            box-shadow: 0 0 10px #eeaeca, 0 0 40px #eeaeca, 0 0 80px #eeaeca;
+        }
+        .button-2{
+            border: none; outline: none;
+            width: 190px;
+            height: 40px;
+            font-size: 15px;
+            border-radius: 60px;
+            background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+            color: #f06dd3;
+            text-shadow: 2px 1px 2px rgb(54, 6, 73);
+        }
+        .button-2:hover {
+            transform: scaleY(1.2);   
+        }
+        .button-2:active {
+            box-shadow: 0 0 0 2px #C01F9E inset, 0 0 0 4px white inset;
+        }
+    
+        .button-3::before, .button-3::after {
+            position: absolute;
+            content: '';
+            transition: all .5s;
+        }
+
+        .button-3 {
+            border: none; outline: none;
+            padding: 3px;
+            color: rgb(156, 238, 170);
+            position: absolute;
+            top: 10px;
+            left: 410px;
+            width: 200px;
+            height: 50px;
+            font-size: 15px;
+            transition: all .5s;
+            background-color: #0f9926;
+        }
+        .button-3:hover{
+            text-shadow: 5px 5px 10px rgb(54, 6, 73);
+        }
+        .button-3::before {
+            bottom: -8px;
+            height: 8px;
+            width: 200px;
+            left: 4px;
+            transform: skewX(45deg);
+            background-color: #07500d;
+            }
+        .button-3::after {
+            right: -7px;
+            height: 50px;
+            width: 8px;
+            bottom: -4px;
+            transform: skewY(45deg);
+            background-color:#07500d;
+            }
+        .button-3:active {
+            margin-left: 10px;
+            margin-top: 10px;
+            }
+        .button-3:active::before {
+            bottom: -5px;
+            height: 5px;
+            left: 3px;
+            }
+        .button-3:active::after {
+            right: -5px;
+            width: 5px;
+            bottom: -3px;
+            }
+
+        .button-4{
+            position: relative;
+            top: 100px;
+            left: -370px;
+            border: none; outline: none;
+            width: 190px;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            background-color: #fdbb2d;
+            
+        }
+      
+        .button-4:hover{
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+            
+        }
+       
+        .button-4:active{
+            border: solid 2px gray;
+        }
+        .button-5{
+            position: relative;
+            top: 100px;
+            left: -280px;
+            border: none; outline: none;
+            width: 90px;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 100%;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            
+        }
+        .button-5:hover{
+            transform: skewX(20deg);
+            
+        }
+        .button-5:active{
+            transform: skewX(-20deg);
+        }
+    </style>
+    <body>
+<button id="button-1" name="button-1" class="button-1">button-1</button>
+<button id="button-2" name="button-2" class="button-2"><span>button-2</span></button>
+<button id="button-3" name="button-3" class="button-3">button-3</button>
+<button id="button-4" name="button-4" class="button-4">button-4</button>
+<button id="button-5" name="button-5" class="button-5">button-5</button>
+    </body>
+</head>

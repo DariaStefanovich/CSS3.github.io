@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>animations</title>
+    <style>
+        body{
+            margin: 0px;
+            background: rgb(34,193,195);
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(112,253,45,0.7570378493194152) 100%);
+        }
+        .common{
+            position: relative;
+            width: 100%;
+            height: 55vw;
+        }
+        .birds{
+            position: absolute;
+            top: 50px;
+            left: 400px;
+            width: 600px; 
+            height: 170px;
+            margin: -16px 0 0 -16px; 
+            background: url(images/flying-pigeon.jpg) no-repeat 0 0; 
+            box-shadow: 0 0 30px white, 0 0 60px white, 0 0 100px white;
+        }
+        .common:hover .birds {
+            animation: move 2s linear infinite;
+            animation: move .3s steps(2) infinite;
+        }
+        .ninja{
+            background: url(images/nar.png) no-repeat 0 0; 
+            width: 400px; height: 320px;
+        }
+        .ninja-1{
+            position: absolute;
+            top: 400px;
+            left: 0px;
+            background-position: 0px 0px; 
+        }
+        .common:hover .ninja:before {
+            animation-timing-function: ease;
+        }
+        .ninja-2{
+            position: absolute;
+            top: 400px;
+            left: 73%;
+            background-position: -400px 0px; 
+            
+        }
+        .common:hover .ninja-1,  .common:hover .ninja-2 {
+            animation: timing 5s infinite;
+        }
+        .cat{
+            position: absolute;
+            top: 10%;
+            left: 70%;
+            width: 300px;
+            height: 157px;
+            background-image: url(images/hm2.jpg);
+            box-shadow: 0 0 30px black, 0 0 60px gray, 0 0 100px black;
+            
+        }
+        .common:hover .cat {
+            animation: rotate 6s infinite ;
+        }
+        .cat-2{
+            position: absolute;
+            top: 20%;
+            left: 2%;
+            width: 300px;
+            height: 201px;
+            background-image: url(images/qq2.jpg);
+            box-shadow: 0 0 30px white, 0 0 60px white, 0 0 100px white;
+            
+        }
+        .common:hover .cat-2 {
+            animation: radius 6s infinite ;
+        }
+        @keyframes timing {
+            50%{
+                left: 25%;
+            }
+            }
+        @keyframes move {
+            from { background-position-y: 0px; }
+            to { background-position-y: -630px; }
+            }
+            @keyframes rotate {
+            100% {transform: rotate(360deg);
+                transform: rotate(360deg);
+                transform: rotate(360deg);}
+            }
+            @keyframes radius {
+            0% {
+                border-radius: 50%;
+            }
+            25% {
+                border-radius: 0%;
+            }
+            50% {
+                border-radius: 50%; 
+            }
+            75% {
+                border-radius: 0%;
+            }
+            }
+        .container {
+            position: absolute;
+            top: 250px;
+            left: 550px;
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+            }
+        .day{
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            background-image: url(images/day2.jpg);
+            border-radius: 50%;
+        }
+        .night{
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            background-image: url(images/night2.jpg);
+            border-radius: 50%;
+        }
+        @keyframes load {
+        100% {
+            transform: translateY(-300px);
+        }
+        }
+         .day-time{
+            animation: load 1s steps(2, end) infinite;
+            }
+    </style>
+    <body>
+        <div class="common">
+        <div class="birds"></div>
+            <div class="ninja-1 ninja"></div>
+            <div class="ninja-2 ninja"></div>
+            <div class="cat"></div>
+            <div class="cat-2"></div>
+    </div>
+    <div class="container">
+        <div class="day-time">
+        <div class="day"></div>
+        <div class="night"></div>
+        </div>
+      </div>
+    </body>
+</head>
